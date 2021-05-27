@@ -1,0 +1,40 @@
+Loop
+{
+    Sleep, 20
+    CoordMode, Pixel, Screen
+    PixelSearch, FoundX, FoundY, 1019, 535, 1096, 575, 0xE276FF, 10, Fast RGB  ; Purple note
+    If (ErrorLevel = 0)
+    {
+        Send, {a Down}
+        Sleep, 28
+        Send, {a Up}
+        Sleep, 28
+    }
+    CoordMode, Pixel, Screen
+    PixelSearch, FoundX, FoundY, 1122, 537, 1210, 584, 0x3DCAFF, 10, Fast RGB  ; Cyan/blue note
+    If (ErrorLevel = 0)
+    {
+        Send, {s Down}
+        Sleep, 28
+        Send, {s Up}
+        Sleep, 28
+    }
+    CoordMode, Pixel, Screen
+    PixelSearch, FoundX, FoundY, 1248, 528, 1314, 560, 0x71E300, 10, Fast RGB  ; Green note
+    If (ErrorLevel = 0)
+    {
+        Send, {Up Down}
+        Sleep, 28
+        Send, {Up Up}
+        Sleep, 28
+    }
+    CoordMode, Pixel, Screen
+    PixelSearch, FoundX, FoundY, 1356, 543, 1431, 578, 0xFF884E, 10, Fast RGB  ; Red note
+    If (ErrorLevel = 0)
+    {
+        Send, {Right Down}
+        Sleep, 28
+        Send, {Right Up}
+        Sleep, 28
+    }
+}
